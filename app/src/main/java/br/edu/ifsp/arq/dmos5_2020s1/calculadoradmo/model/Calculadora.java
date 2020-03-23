@@ -2,6 +2,8 @@ package br.edu.ifsp.arq.dmos5_2020s1.calculadoradmo.model;
 
 import br.edu.ifsp.arq.dmos5_2020s1.calculadoradmo.constants.Constantes;
 
+import static java.lang.Math.pow;
+
 public class Calculadora {
 
     private static Calculadora sCalculadora = null;
@@ -42,6 +44,8 @@ public class Calculadora {
                 case Constantes.DIVISAO:
                     memoria /= valor;
                     break;
+                case Constantes.POTENCIA:
+                    memoria = (float) pow(memoria, valor);
                 default:
                     break;
             }

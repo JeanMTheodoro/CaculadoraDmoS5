@@ -16,7 +16,7 @@ import br.edu.ifsp.arq.dmos5_2020s1.calculadoradmo.model.Calculadora;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button bntC, bntDiv, bntMult, bntsub, bntAdi, bntIgual, bntPonto, bntZero, bntUm, bntDois, bntTres, bntQuatro, bntCinco, bntSeis, bntSete, bntOito, bntNove;
+    private Button bntC, bntDiv, bntMult, bntsub, bntAdi, bntIgual, bntPonto, bntZero, bntUm, bntDois, bntTres, bntQuatro, bntCinco, bntSeis, bntSete, bntOito, bntNove, bntCe, bntPot;
     private TextView textResultado;
     private Constantes constantes;
 
@@ -65,6 +65,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bntOito.setOnClickListener(this);
 
         bntNove.setOnClickListener(this);
+
+        bntCe.setOnClickListener(this);
+
+        bntPot.setOnClickListener(this);
     }
 
 
@@ -103,6 +107,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bntOito = findViewById(R.id.button_number_eight);
 
         bntNove = findViewById(R.id.button_number_nine);
+
+        bntPot = findViewById(R.id.button_potencia);
+
+        bntCe = findViewById(R.id.button_ce);
 
         textResultado = findViewById(R.id.text_resultado);
     }
@@ -144,6 +152,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_point:
                 ponto();
                 break;
+
+            case R.id.button_potencia:
+                operacao = Constantes.POTENCIA;
 
             case R.id.button_number_zero:
                 displayNumerico(0);

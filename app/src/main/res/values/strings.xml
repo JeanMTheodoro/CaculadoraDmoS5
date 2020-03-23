@@ -18,4 +18,6 @@
     <string name="button_sub_text">-</string>
     <string name="button_adi_text">+</string>
     <string name="text_resultado">0.0</string>
+    <string name="button_text_ce">CE</string>
+    <string name="button_text_potencia">^</string>
 </resources>
